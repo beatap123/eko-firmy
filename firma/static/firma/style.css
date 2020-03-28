@@ -1,0 +1,13 @@
+
+body {
+    background: url("images/12730.jpg");
+    background-repeat:no-repeat;
+    background-size:100%;
+    padding-top: 100px;
+    padding-left: 300px;
+}
+
+div {
+  padding-top: 300px;
+  padding-left: 700px;
+}

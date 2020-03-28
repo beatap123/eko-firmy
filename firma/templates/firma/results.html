@@ -1,0 +1,39 @@
+{% load static %}
+
+{% if submitbutton == 'Szukaj' and request.GET.q != '' %}
+{% if results %}
+
+<h1>
+        Firma <b>{{ request.GET.q }}</b> jest w naszej bazie!
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'firma/style.css' %}" />
+</h1>
+<br/>
+Oznacza to, że firma ta nie testuje swoich produktów na zwierzętach.
+<br/>
+<br/>
+{% for result in results %}
+<br/>
+<h2> Coś więcej o firmie {{result.firm_name}} ? </h2>
+
+{{result.detail}}
+<br/>
+
+{% endfor %}
+{% else %}
+<h1>
+        <b>Niestety! Tej firmy nie ma w naszej bazie.</b>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" type="text/css" href="{% static 'firma/style.css' %}" />
+</h1>
+<br/>
+Oznacza to, że testuje swoje produkty na zwierzętach, lub brak jest informacji
+o tym aspekcie jej działań.
+<br/> A może jeszcze nie mamy jej w swojej bazie?
+<br/>
+<br/>
+Jeśli chcesz coś dodać, daj nam znać!
+{% endif %}
+{% endif %}

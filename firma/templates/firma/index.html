@@ -1,0 +1,25 @@
+{% load static %}
+
+<head>
+    <h1>WYSZUKIWARKA FIRM</h1>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'firma/style.css' %}" />
+</head>
+<body>
+<br/>
+<i> Wpisz w okno wyszukiwarki nazwę swojej ulubionej firmy i sprawdź czy znajduje się w naszej bazie firm,
+<br/>
+    które NIE TESTUJĄ swoich produktów na zwierzętach.</i>
+<br/>
+<br/>
+<form action="{% url 'firma:index' %}" method="GET" value="{{request.GET.q}}">
+Search <input type="text" name="q" value="{{request.GET.q}}" placeholder="Wpisz nazwę firmy"/>
+<input type="submit" name="submit" value="Szukaj"/>
+</form>
+<div>
+<a href="https://www.freepik.com/free-photos-vectors/flower">Flower photo created by jcomp - www.freepik.com</a>
+</div>
+</body>
+
+
