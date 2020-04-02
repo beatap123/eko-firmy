@@ -33,11 +33,19 @@ def index(request):      # do dodania wyświetlanie ostatnio wyszukiwanych firm
         return render(request, 'firma/index.html')
 
 
-
 def results(request, firm_name):
     firm = get_object_or_404(Firm, pk=firm_name)
     return render(request, 'firma/results.html', {'firm': firm})
 
+
+class FirmListView(generic.ListView):
+    all_firms = Firm.objects.order_by('-add_date')
+    template_name = 'firma/allfirm.html'
+    context_object_name = 'all_firms'
+
+    def get_queryset(self):
+        """Return the last five published questions."""
+        return Firm.objects.order_by('-add_date')
 
 
 # class IndexView(generic.ListView):
