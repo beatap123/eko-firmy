@@ -25,7 +25,7 @@ SECRET_KEY = '6&8^7j6ufr!c=h@c5bo07he$jk%0mm0@dsj61h(j)ks8cb84nw'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['beatap.pythonanywhere.com']
 
 
 # Application definition
