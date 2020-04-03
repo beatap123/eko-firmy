@@ -1,21 +1,22 @@
 {% load static %}
 
 <head>
-    <h1>WYKAZ WSZYSTKICH FIRM</h1>
+    <h3>FIRMY, KTÓRE NIE TESTUJĄ SWOICH PRODUKTÓW NA ZWIERZĘTACH</h3>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" type="text/css" href="{% static 'firma/style.css' %}" />
 </head>
-<body>
-
+<body class="allfirm">
+<div class="allfirm">
 {% if all_firms %}
     <ul>
     {% for firm in all_firms %}
-        <li><a href="/firma/{{ firm.firm_name}}/">{{ firm.firm_name }}</a></li>
+        <li><a href="{{ firm.detail}}">{{ firm.firm_name }}</a></li>
     {% endfor %}
     </ul>
+</div>
 {% else %}
-    <p>No polls are available.</p>
+    <p>No firms are available.</p>
 {% endif %}
 
 </body>

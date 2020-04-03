@@ -6,6 +6,11 @@ h2 {
     font-size: 25px;
 }
 
+h3 {
+    font-size: 25px;
+    padding-top: 20px;
+}
+
 body {
     background: url("images/12730.jpg");
     background-repeat:no-repeat;
@@ -18,3 +23,20 @@ div {
   padding-top: 300px;
   padding-left: 700px;
 }
+
+body.allfirm {
+    background: url("images/12730.jpg");
+    background-repeat:no-repeat;
+    background-size:100%;
+    padding-top: 20px;
+    padding-left: 200px;
+}
+
+div.allfirm {
+    font-size: 11px;
+    padding-top: 0px;
+    padding-left: 200px;
+}
+
+
+
