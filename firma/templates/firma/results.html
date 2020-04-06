@@ -19,7 +19,7 @@ Oznacza to, że firma ta nie testuje swoich produktów na zwierzętach.
 
 <a href="{{result.detail}}">zajrzyj na ich stronę!</a>
 <br/>
-
+<br/>
 {% endfor %}
 {% else %}
 <h1>
@@ -35,5 +35,10 @@ o tym aspekcie jej działań.
 <br/>
 <br/>
 Jeśli chcesz coś dodać, daj nam znać!
+<br/>
+<br/>
 {% endif %}
 {% endif %}
+<form action="{% url 'firma:index' %}" >
+<input type="submit" name="submit" value="Cofnij"/>
+</form>

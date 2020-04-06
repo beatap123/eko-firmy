@@ -18,5 +18,7 @@
 {% else %}
     <p>No firms are available.</p>
 {% endif %}
-
+<form action="{% url 'firma:index' %}" >
+<input type="submit" name="submit" value="Cofnij"/>
+</form>
 </body>
