@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '6&8^7j6ufr!c=h@c5bo07he$jk%0mm0@dsj61h(j)ks8cb84nw'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['beatap.pythonanywhere.com', '127.0.0.1']
 
